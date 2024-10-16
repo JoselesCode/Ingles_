@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Confirmación de Compra</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Confirmación</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>¡Gracias por su compra!</p>
+      <p>Total a pagar: {{ totalAmount | currency }}</p>
+      <ion-button expand="full" (click)="goBack()">Volver</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,46 @@
+:root {
+    --ion-header-height: 56px; /* Ajusta si es necesario */
+    --ion-footer-height: 56px; /* Ajusta si es necesario */
+  }
+  
+  ion-app {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  ion-content {
+    flex: 1;
+  }
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px); 
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0); 
+    }
+  }
+  
+  .animate-title {
+    animation: fadeIn 1.5s ease-in-out; 
+  }
+
+  ion-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh; 
+  }
+  
+  ion-footer {
+    background-color: #f8f8f8;
+    color: #c7bcbc;
+  }
+  
+  ion-title.ion-text-center {
+    font-size: 14px;
+    padding: 10px;
+  }
+  

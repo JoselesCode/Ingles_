@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Grieta del Invocador</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Campeonato DUOC - Grieta del Invocador</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Entradas disponibles para el mapa Grieta del Invocador.</p>
+
+      <!-- Formulario de Compra -->
+      <form (ngSubmit)="onSubmit()" #form="ngForm">
+        <ion-item>
+          <ion-label>Tipo de Entrada</ion-label>
+          <ion-select [(ngModel)]="tipoEntrada" name="tipoEntrada" required>
+            <ion-select-option value="normal">Normal</ion-select-option>
+            <ion-select-option value="vip">VIP</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label>¿Eres jugador de LoL?</ion-label>
+          <ion-toggle [(ngModel)]="esJugadorLoL" name="esJugadorLoL"></ion-toggle>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Apellido</ion-label>
+          <ion-input [(ngModel)]="apellido" name="apellido" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Edad</ion-label>
+          <ion-input type="number" [(ngModel)]="edad" name="edad" min="0" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Cantidad de Entradas</ion-label>
+          <ion-input type="number" [(ngModel)]="cantidad" name="cantidad" min="1" required></ion-input>
+        </ion-item>
+        <ion-button expand="full" type="submit" [disabled]="!form.valid">Comprar</ion-button>
+      </form>
+    </ion-card-content>
+  </ion-card>
+  <ion-footer>
+    <ion-toolbar>
+      <ion-button expand="full" (click)="goBack()">Volver</ion-button>
+    </ion-toolbar>
+  </ion-footer>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title class="ion-text-center">© 2024 JoseDiazGonzalez</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+
+</ion-content>
+
+
